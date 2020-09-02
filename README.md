@@ -10,15 +10,15 @@ class_order = mro(class_name)
 print([a_class.__name__ for a_class in class_order])
 ```
 
-#Expected output
+# Expected output
 
 program is expected to output the class iself and a its ancestors, ordered from the nearest ancestor to the furthest, `[class1, class2, class3, class4, class5]` .
 
-#c3 Algorithm
+# c3 Algorithm
 In computing, C3 superclass linearization is an algorithm used primarily to obtain the order in which methods should be inherited in the presence of multiple inheritance. In other words, the output of C3 superclass linearization is a deterministic Method Resolution Order (MRO) 
 [source](https://en.wikipedia.org/wiki/C3_linearization)
 
-#mro definition
+# mro definition
 
 **mro** method resolution order of a class is defined as a set of rules that determine the linearization of a class an its ancestors.The c3 linearization of a class is the sum of the class plus a unique merge of the linearizations of its parents defined by:
  `mro(A) = [A] + merge([ [mro(1)] ,[mro(2),..mro(n)] ])`
